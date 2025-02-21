@@ -1,0 +1,139 @@
+/* Recursos: */
+
+@import url("https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css");
+
+/* Constantes: */
+
+html:root {
+
+    --main-color: #222222;
+    --neutral-color: #DDDDDD;
+
+}
+
+.dark_theme:root {
+
+    --main-color: #DDDDDD;
+    --neutral-color: #222222;
+
+}
+
+/* Estilos: */
+
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: 0.5s;
+
+}
+
+body {
+
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral-color);
+    overflow: hidden;
+
+}
+
+#container {
+
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    background-color: transparent;
+
+}
+
+#container h1 {
+
+    font-weight: 800;
+    color: var(--main-color);
+    text-transform: uppercase;
+
+}
+
+#container #calculator {
+
+    height: auto;
+    width: auto;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 50px);
+    grid-template-rows: repeat(6, 50px);
+    gap: 10px;
+    background-color: transparent;
+    border: 2px solid var(--main-color);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: hidden;
+
+}
+
+#container #calculator #light {
+
+    display: none;
+
+}
+
+#container #calculator #dark {
+
+    display: flex;
+
+}
+
+#container #calculator #dark i, #container #calculator #light i {
+
+    transition: none;
+
+}
+
+#container #calculator #display {
+
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    grid-column: 2 / span 3;
+    border: 2px solid var(--main-color);
+    font-size: 20px;
+    font-weight: bolder;
+    color: var(--main-color);
+    text-align: end;
+    padding: 0px 10px 0px 10px;
+    overflow: hidden;
+
+}
+
+#container #calculator button, #container #calculator:hover button:not(:hover) {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid var(--main-color);
+    border-radius: 50%;
+    font-size: 17px;
+    font-weight: bold;
+    color: var(--main-color);
+    cursor: pointer;
+
+}
+
+#container #calculator button:hover, #container #calculator button:nth-child(4),
+#container #calculator button:nth-child(5), #container #calculator button:nth-child(23) {
+
+    background-color: var(--main-color);
+    color: var(--neutral-color);
+
+}
